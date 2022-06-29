@@ -36,8 +36,8 @@ class TestS3BucketConnectorMethods(unittest.TestCase):
         self.s3_endpoint_url = 'https://s3.eu-central-1.amazonaws.com'
         self.s3_bucket_name = 'test-bucket'
         # Creating s3 access keys as environment variables
-        os.environ[self.s3_access_key] = 'AKIA6K5NCVRPHZIFKFM7'
-        os.environ[self.s3_secret_key] = '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'
+        os.environ[self.s3_access_key] = 'key1'
+        os.environ[self.s3_secret_key] = 'key2'
         # Creating a bucket on the mocked s3
         self.s3 = boto3.resource(service_name='s3', endpoint_url=self.s3_endpoint_url)
         self.s3.create_bucket(Bucket=self.s3_bucket_name,
